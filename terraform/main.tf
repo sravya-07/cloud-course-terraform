@@ -9,6 +9,8 @@ resource "aws_s3_bucket" "bucket" {
 }
 
 variable "bucket_name" {
+   default = "sdfuhsdoifjsdoifj"
 }
 variable "requestor" {
+  default = "sravyaa"
 }
