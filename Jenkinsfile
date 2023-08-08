@@ -12,6 +12,7 @@ pipeline
           sh"""
             ls -altr
             pwd
+            terraform --version
           """
         }
       }
