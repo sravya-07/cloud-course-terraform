@@ -3,16 +3,15 @@ pipeline
   agent any
   stages
   {
-    stage("check contents")
+    stage("terraform init")
     {
       steps
       {
         script
         {
           sh"""
-            ls -altr
-            pwd
-            terraform --version
+             cd terraform
+             terarform init
           """
         }
       }
