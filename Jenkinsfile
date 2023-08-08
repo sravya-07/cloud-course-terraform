@@ -11,7 +11,7 @@ pipeline
         {
           sh"""
              cd terraform
-             terarform init
+             terraform init
           """
         }
       }
