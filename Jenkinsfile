@@ -2,6 +2,7 @@ pipeline
 {
   agent any
   stages
+  option {ansiColor("xterm")}
   {
     stage("terraform init")
     {
@@ -10,11 +11,24 @@ pipeline
         script
         {
           sh"""
-             cd terraform
-             terraform init
+              cd terraform
+              terraform init
           """
         }
       }
     }
+
+    stage("terraform plan")
+    {
+      steps{
+        script{
+          sh"""
+            cd terraform
+            terraform plan
+          """
+        }
+      }
+    }
+
   }
 }
