@@ -17,13 +17,14 @@ pipeline
       }
     }
 
-    stage("terraform plan")
+    stage("terraform plan & apply")
     {
       steps{
         script{
           sh"""
             cd terraform
             terraform plan
+            terraform apply --auto-approve
           """
         }
       }
